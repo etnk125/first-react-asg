@@ -26,9 +26,10 @@ function App() {
   return (
     <>
       <body>
-        <Header />
-        {/* send onSearch function through props */}
-        <SearchBar onSearch={onSearch} text={text} setText={setText} />
+        <div className="stickyHeader">
+          <Header />
+          <SearchBar onSearch={onSearch} text={text} setText={setText} />
+        </div>
         <Trips data={state.data} setText={setText} onSearch={onSearch} />
       </body>
     </>

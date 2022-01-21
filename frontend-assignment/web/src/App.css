@@ -1,3 +1,10 @@
+:root {
+  --title: black;
+  --content: #828282;
+  --ogbl: #2c9cdb;
+}
+
+
 * {
   font-family: 'Noto Sans Thai', sans-serif;
   font-weight: 400;
@@ -9,4 +16,15 @@
 
 body {
   text-align: center;
+}
+
+.stickyHeader {
+  background-color: white;
+  border-top: 1px solid white;
+  padding-bottom: 10px;
+  opacity: 0.97;
+  top: 0;
+  position: sticky;
+
+  /* background: linear-gradient(white, white, white, white, white, white, white, white, white, white, white, white, white, white, white, white, white, white, white, transparent); */
 }

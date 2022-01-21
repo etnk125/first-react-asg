@@ -1,0 +1,21 @@
+:root {
+  --border: #828282;
+  --border-active: #2c9cdb;
+}
+
+input {
+  width: 90%;
+  max-width: 530px;
+  margin: 15px auto 0px;
+  padding: 5px 0;
+  text-align: center;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--border);
+  /* transition: all 0.2s; */
+
+}
+
+input:focus {
+  border-color: var(--border-active);
+}

@@ -1,25 +1,37 @@
-import React from "react";
-import logo from "./logo.svg";
+import React, { useState, useEffect } from "react";
 import "./App.css";
+import SearchBar from "./components/SearchBar";
+import Trips from "./components/Trips";
+import Header from "./components/Header";
+
+const url = "http://localhost:9000/";
 
 function App() {
+  const [state, setState] = useState({ data: [] });
+  const [text, setText] = useState("");
+
+  async function onSearch(text) {
+    const res = await fetch(url + "trips?q=" + text);
+    const jsondata = await res.json();
+    console.log(jsondata, text);
+    setState((prevState) => {
+      return { ...prevState, data: jsondata };
+    });
+  }
+
+  useEffect(() => {
+    onSearch("");
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          testss
-        </a>
-      </header>
-    </div>
+    <>
+      <body>
+        <Header />
+        {/* send onSearch function through props */}
+        <SearchBar onSearch={onSearch} text={text} setText={setText} />
+        <Trips data={state.data} setText={setText} onSearch={onSearch} />
+      </body>
+    </>
   );
 }
 

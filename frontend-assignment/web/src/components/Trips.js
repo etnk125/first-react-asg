@@ -1,18 +1,17 @@
 import React from "react";
 import Trip from "./Trip";
-import "./Trips.css";
 
-function Trips({ data, setText, onSearch}) {
-  if (data === []) {
-    data = [];
+function Trips({ data, webURL }) {
+  if (data.length !== 0) {
+    return (
+      <ul>
+        {data.map((val) => {
+          return <Trip data={val} webURL={webURL} />;
+        })}
+      </ul>
+    );
   }
-  return (
-    <ul>
-      {data.map((val) => {
-        return <Trip data={val} setText={setText} onSearch={onSearch}/>;
-      })}
-    </ul>
-  );
+  return <></>;
 }
 
 export default Trips;

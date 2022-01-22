@@ -1,10 +1,12 @@
 import React from "react";
 import "./Header.css";
 
-function Header() {
+function Header({ url }) {
   return (
     <>
-      <h1>เที่ยวไหนดี</h1>
+      <a href={url}>
+        <h1>เที่ยวไหนดี</h1>
+      </a>
     </>
   );
 }

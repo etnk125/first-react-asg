@@ -1,10 +1,11 @@
-let url = "http://localhost:9000/trips";
+//for fetch debugging before implement react web
+let url = "http://localhost:9000";
 let tripList = document.querySelector("#tripList");
 let searchBar = document.querySelector("#searchBar");
 // to get all data
 async function getData() {
   try {
-    let response = await fetch(url);
+    let response = await fetch(`${url}/trips`);
     let data = await response.json();
     console.log(data);
     showData(data);
@@ -16,20 +17,8 @@ async function getData() {
 async function searchData(searchText) {
   try {
     // let response = await fetch(url + "?keyword=" + searchText);
-    let response = await fetch(url + "?q=" + searchText);
-    // let response = await fetch(url);
-    // console.log(response);
+    let response = await fetch(`${url}/api/trips?keyword=${searchText}`);
     let data = await response.json();
-    // let filteredData = data.filter((val) => {
-    //   console.log(val.title);
-    //   return (
-    //     val.title.includes(searchText) ||
-    //     val.description.includes(searchText) ||
-    //     val.tags.includes(searchText)
-    //   );
-    // });
-    // showData(filteredData);
-    // console.log(data);
     showData(data);
   } catch (err) {
     console.log(err);

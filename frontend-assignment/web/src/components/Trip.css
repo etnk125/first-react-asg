@@ -67,7 +67,8 @@ p {
 }
 
 .readmore {
-  color: var(--readmore)
+  color: var(--readmore);
+  text-decoration: underline;
 }
 
 .tag,
@@ -83,7 +84,7 @@ p {
 }
 
 
-.container {
+.reveal {
   list-style: none;
   margin: 10px auto;
   max-width: 590px;
@@ -95,7 +96,7 @@ p {
 
 }
 
-.container:hover {
+.reveal:hover {
   box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.2);
 }
 

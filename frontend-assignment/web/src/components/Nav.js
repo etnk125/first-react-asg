@@ -7,11 +7,16 @@ function Nav(props) {
   return (
     <>
       <nav>
-        <Header url={props.webURL} />
+        <Header
+          limit={props.limit}
+          url={props.webURL}
+          onSearch={props.onSearch}
+        />
         <SearchBar
           onSearch={props.onSearch}
           text={props.text}
           setText={props.setText}
+          limit={props.limit}
         />
       </nav>
     </>

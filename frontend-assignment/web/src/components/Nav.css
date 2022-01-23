@@ -1,11 +1,12 @@
-.nav {
+nav {
 
   display: block;
   width: 100%;
   background-color: white;
   border-top: 1px solid white;
-  padding-bottom: 15px;
+  padding: 10px;
   opacity: 0.97;
   top: 0;
   position: sticky;
+  z-index: 999;
 }

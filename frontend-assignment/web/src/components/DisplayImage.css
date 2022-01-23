@@ -1,0 +1,10 @@
+.wrapper {
+  padding-top: 40px;
+}
+
+.wrapper img {
+  margin: 0 auto;
+  display: block;
+  max-width: 590px;
+  width: 80%;
+}

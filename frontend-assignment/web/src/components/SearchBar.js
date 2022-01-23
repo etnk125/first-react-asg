@@ -8,7 +8,7 @@ function SearchBar(props) {
     e.preventDefault();
     const text = e.target.value;
     setText(text);
-    onSearch(text);
+    onSearch({ text: text, limit: props.limit });
   }
   return (
     <>

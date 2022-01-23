@@ -2,11 +2,12 @@
   --ogblue: #2c9cdb;
 }
 
+
 a {
   text-decoration: none;
 }
 
-h1 {
+.header {
   display: block;
   text-align: center;
   position: relative;
@@ -14,10 +15,16 @@ h1 {
   font-size: 70px;
   font-weight: 400;
   color: var(--ogblue);
+  transition: all 0.2s;
+}
+
+.header.fontdown {
+  font-size: 50px;
+  margin-top: 0;
 }
 
 @media screen and (max-width: 590px) {
-  h1 {
+  .header {
     margin: 0 auto;
     font-size: 50px;
   }

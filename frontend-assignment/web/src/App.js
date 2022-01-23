@@ -12,14 +12,20 @@ function App() {
   const keyword = searchParams.get("keyword");
   const [state, setState] = useState({ data: [] });
   const [text, setText] = useState(keyword ? keyword : "");
+  const [loading, setLoading] = useState(false);
 
   async function onSearch(text) {
-    const res = await fetch(`${dbURL}api/trips?keyword=${text}`);
-    const JSONdata = await res.json();
-    console.log(JSONdata, text);
-    setState((prevState) => {
-      return { ...prevState, data: JSONdata };
-    });
+    setLoading(true);
+    try {
+      const res = await fetch(`${dbURL}api/trips?keyword=${text}`);
+      const JSONdata = await res.json();
+      setState((prevState) => {
+        return { ...prevState, data: JSONdata };
+      });
+    } catch (err) {
+      console.log(err);
+    }
+    setLoading(false);
   }
 
   useEffect(() => {
@@ -35,7 +41,8 @@ function App() {
           text={text}
           setText={setText}
         />
-        <Trips data={state.data} webURL={webURL} />
+        {loading && <center style={{ padding: 20 }}>loading...</center>}
+        <Trips data={state.data} webURL={webURL} loading={loading} />
       </body>
     </>
   );

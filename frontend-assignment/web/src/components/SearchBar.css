@@ -12,7 +12,6 @@ input {
   border: none;
   outline: none;
   border-bottom: 1px solid var(--border);
-  /* transition: all 0.2s; */
 
 }
 

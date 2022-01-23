@@ -10,7 +10,6 @@ function Trip({ data, webURL }) {
   const photos = data.photos;
   const tags = data.tags;
 
-  console.log(photos);
   return (
     <>
       <li key={eid} className="container">

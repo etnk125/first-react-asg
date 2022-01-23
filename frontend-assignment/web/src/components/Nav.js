@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import SearchBar from "./SearchBar";
+import "./Nav.css";
 
 function Nav(props) {
   return (

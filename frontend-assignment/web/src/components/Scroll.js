@@ -1,3 +1,5 @@
+// make trip act like reveal when scrolling
+
 export function reveal() {
   let items = document.querySelectorAll(".reveal");
   const windowHeight = window.innerHeight;

@@ -1,6 +1,7 @@
 import React from "react";
 import "./SearchBar.css";
 
+//search bar set use and set text from props then fetch data
 function SearchBar(props) {
   const onSearch = props.onSearch;
   const setText = props.setText;

@@ -149,3 +149,22 @@ p {
     max-height: 150px;
   }
 }
+
+@media screen and (max-width: 300px) {
+  .reveal {
+    margin: 2px;
+    padding-bottom: 2px;
+  }
+
+
+  .main-img {
+    max-width: 70px;
+  }
+
+  .main-img,
+  .detail {
+    padding: 2px;
+    margin: 2px;
+    max-height: 70px;
+  }
+}

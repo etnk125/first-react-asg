@@ -3,6 +3,7 @@ import Header from "./Header";
 import SearchBar from "./SearchBar";
 import "./Nav.css";
 
+//nav bar contain header and searchbar
 function Nav(props) {
   return (
     <>

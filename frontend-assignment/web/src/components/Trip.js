@@ -1,8 +1,12 @@
 import React from "react";
-import TextTruncate from "react-text-truncate"; // recommend
+import TextTruncate from "react-text-truncate";
 import "./Trip.css";
 
+/* one card */
+
 function Trip({ data, webURL, onSearch, limit }) {
+  /*from props*/
+
   const title = data.title;
   const url = data.url;
   const eid = data.eid;
@@ -11,12 +15,17 @@ function Trip({ data, webURL, onSearch, limit }) {
   const tags = data.tags;
   return (
     <>
+      {/* reveal make li reveal when scroll */}
       <li key={eid} className="reveal">
+        {/* main-img */}
         <a href={url}>
           <img src={photos[0]} alt="" className="main-img"></img>
         </a>
+        {/* right side of card */}
         <div className="detail">
+          {/* wrap only text */}
           <div className="text-wrapper">
+            {/* trip-title */}
             <a href={url} className="title-link">
               <TextTruncate
                 line={2}
@@ -26,6 +35,7 @@ function Trip({ data, webURL, onSearch, limit }) {
                 id="title"
               />
             </a>
+            {/* trip-description */}
             <TextTruncate
               line={3}
               element="p"
@@ -37,6 +47,7 @@ function Trip({ data, webURL, onSearch, limit }) {
                 </a>
               }
             />
+            {/* tags */}
             <div className="tag">
               หมวด -
               {tags.map((val, i) => {
@@ -50,7 +61,6 @@ function Trip({ data, webURL, onSearch, limit }) {
                         return false;
                       }}
                       href={`${webURL}?keyword=${val}`}
-                      // href="#"
                     >
                       {val}
                     </a>
@@ -59,6 +69,7 @@ function Trip({ data, webURL, onSearch, limit }) {
               })}
             </div>
           </div>
+          {/* list of photo */}
           <ul className="photos">
             <li>
               <a href={url}>

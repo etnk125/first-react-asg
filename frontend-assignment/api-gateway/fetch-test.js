@@ -16,7 +16,6 @@ async function getData() {
 // to get searchData
 async function searchData(searchText) {
   try {
-    // let response = await fetch(url + "?keyword=" + searchText);
     let response = await fetch(`${url}/api/trips?keyword=${searchText}`);
     let data = await response.json();
     showData(data);

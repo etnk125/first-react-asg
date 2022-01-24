@@ -6,14 +6,12 @@
 
 button {
   height: 50px;
-  width: 80%;
   max-width: 300px;
+  width: 80%;
 
   margin: 15px auto;
   border-radius: 15px;
   border: none;
-  /* border: 1px solid var(--gray);
-  border-top: 0px solid var(--gray); */
   box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2);
 
   color: var(--gray);
@@ -23,7 +21,6 @@ button {
 }
 
 button:hover {
-  /* border: 1px solid white; */
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
   color: white;
   background-color: var(--ogblue);

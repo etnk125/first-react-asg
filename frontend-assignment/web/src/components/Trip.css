@@ -4,6 +4,22 @@
   --readmore: #2c9cdb;
 }
 
+.reveal {
+  list-style: none;
+  margin: 10px auto;
+  max-width: 590px;
+  width: 100%;
+  display: flex;
+  border-radius: 15px;
+  padding: 20px 20px 30px;
+  transition: all 0.3s;
+
+}
+
+.reveal:hover {
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.2);
+}
+
 
 .main-img {
   display: block;
@@ -46,7 +62,6 @@
 }
 
 .title-link {
-
   text-decoration: none;
 }
 
@@ -79,26 +94,12 @@ p {
 
 }
 
+
 .tag a {
   text-decoration: underline;
 }
 
 
-.reveal {
-  list-style: none;
-  margin: 10px auto;
-  max-width: 590px;
-  width: 100%;
-  display: flex;
-  border-radius: 15px;
-  padding: 20px 20px 30px;
-  transition: all 0.3s;
-
-}
-
-.reveal:hover {
-  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.2);
-}
 
 .photos {
   padding-right: 20px;

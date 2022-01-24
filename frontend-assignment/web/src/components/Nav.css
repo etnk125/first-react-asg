@@ -2,11 +2,11 @@ nav {
 
   display: block;
   width: 100%;
+  top: 0;
   background-color: white;
   border-top: 1px solid white;
   padding: 10px;
   opacity: 0.97;
-  top: 0;
   position: sticky;
   z-index: 999;
 }

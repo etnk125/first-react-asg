@@ -3,8 +3,8 @@
 }
 
 .wrapper img {
-  margin: 0 auto;
   display: block;
-  max-width: 590px;
   width: 80%;
+  max-width: 590px;
+  margin: 0 auto;
 }
